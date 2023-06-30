@@ -1,0 +1,463 @@
+@font-face {
+  font-family: "Gilroy Medium";
+  src: url("gilroy-medium.ttf");
+}
+
+li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+  font-family: Gilroy, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color:  #070707;
+}
+
+.container{
+  max-width: 914px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* header */
+
+.header{
+  margin-top: 32px;
+  padding-bottom: 42px;
+}
+
+.nav-list{
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nav-link{
+  color: #828282;
+}
+
+.nav-link:hover{
+  color:  #070707;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.nav-btn {
+  width: 33px;
+  height: 19px;
+  display: none;
+}
+
+/*Denis Novik */
+
+.novik{
+  padding-bottom: 105px;
+}
+
+.novik-line{
+  height: 1px;
+  background-color:#828282;
+  max-width: 940px;
+}
+
+.novik-info{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  align-items: flex-end;
+}
+
+.novik-title{
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.novik-text{
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+.novik-languages{
+  font-size: 16px;
+  transform: translate(26px, -30px) rotate(-90deg);
+}
+
+.novik-img{
+  margin-top: 50px;
+}
+
+.novik-img-mobile{
+  display: none;
+}
+
+/* about me */
+
+.about-me{
+  padding-top: 120px;
+  padding-bottom: 107px;
+  background: #F6F6F6;
+  text-align: center;
+  font-size: 18px;
+}
+
+.about-me-title{
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.about-me-text-one{
+  margin: 17px auto 0 auto;
+  max-width: 440px;
+}
+
+.about-me-text-two,
+.about-me-text-three{
+  margin: 36px auto 0 auto;
+  max-width: 350px;
+}
+
+/* skills */
+
+.skills{
+  padding-bottom: 110px;
+  margin-top: 91px;
+}
+
+.skills-title{
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.skills-text{
+  text-align: center;
+  font-size: 18px;
+  margin-top: 70px;
+}
+
+.skills-wrapper{
+  margin-top: 83px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 91px;
+}
+
+.skills-one,
+.skills-two,
+.skills-three,
+.skills-four{
+  text-align: center;
+}
+
+.skills-one-text,
+.skills-two-text,
+.skills-three-text,
+.skills-four-text{
+  color: #828282;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.skills-one-stars,
+.skills-two-stars,
+.skills-three-stars,
+.skills-four-stars{
+  margin-top: 41px;
+  display: flex;
+  gap: 9px;
+  justify-content: center;
+}
+
+.skills-four-stars{
+  margin-top: 57px;
+}
+
+/* portfolio */
+
+.portfolio{
+  padding-top: 113px;
+  background: #F6F6F6;
+}
+
+.portfolio-title{
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 47px;
+  font-weight: 700;
+}
+
+.project{
+  padding-bottom: 99px;
+}
+
+.project-img{
+  margin-bottom: 45px;
+}
+
+.project-link{
+  text-align: center;
+  font-size: 18px;
+  text-decoration-line: underline;
+}
+
+.project-link:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.project-link a{
+  color: #070707;
+}
+
+/* contacts */
+
+.contacts{
+  margin-top: 114px;
+  padding-bottom: 123px;
+  text-align: center;
+}
+
+.contacts-title{
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.contacts-subtitle{
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.contacts-btn{
+  color: #FFF;
+  padding: 13px 30px 6px 28px;
+  font-size: 18px;
+  background-color: #070707;
+  display: inline-block;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+.contacts-btn:hover{
+  box-shadow: 2px 1px 1px #070707;
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.contacts-social{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 92px;
+}
+
+.contacts-social a:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.contacts-text{
+  color: #828282;
+  text-align: center;
+  margin-top: 46px;
+}
+
+/* MEDIA */
+
+@media (max-width: 850px) {
+
+  /* skills */
+
+  .skills-wrapper{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  /* header */
+
+  .nav-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: start;
+    transform: translateY(-100%);
+    transition: 0.3s ease;
+    font-size: 34px;
+    padding-left: 26px;
+    margin-bottom: -165px;
+  }
+
+  .nav-link{
+    margin-top: 68px;
+    display: inline-block;
+  }
+
+  .nav-btn {
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    right: 0;
+    top: 15px;
+  }
+
+  .nav-open .nav-list {
+    transform: translateY(0);
+  }
+
+  .header{
+      margin-top: 0;
+      padding-bottom: 0;
+  }
+
+  /* novik */
+
+  .novik-line{
+    display: none;
+  }
+
+  .novik-info{
+    margin-top: 0;
+    display: block;
+    position: relative;
+  }
+
+  .novik-text{
+    font-size: 18px;
+    margin-top: 23px;
+    z-index: -999;
+    position: relative;
+  }
+
+  .novik-title{
+    margin-top: 65px;
+    z-index: -999;
+    position: relative;
+  }
+
+  .novik-languages{
+    display: none;
+    transform: translate(calc((800/1600)*100%), 520px) rotate(90deg);
+    color: #828282;
+    font-size: 34px;
+  }
+
+  .novik-languages:hover{
+    cursor: pointer;
+    color: #070707;
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .novik-img{
+    display: none;
+  }
+
+  .novik-img-mobile{
+    display: block;
+    margin: 37px auto 0 auto;
+  }
+
+  .novik {
+    padding-bottom: 83px;
+  }
+  
+  /* about me */
+  
+  .about-me{
+    padding-top: 81px;
+    padding-bottom: 76px;
+  }
+
+  /* skills */
+
+  .skills{
+    margin-top: 83px;
+  }
+
+  .skills-text{
+    margin-top: 50px;
+  }
+  
+  /* portfolio */
+
+  .portfolio{
+    padding-top: 81px;
+  }
+
+  .project{
+    padding-bottom: 78px;
+  }
+  
+  .project-img{
+    margin-bottom: 33px;
+  }
+
+  /* contacts */
+
+  .contacts{
+    margin-top: 82px;
+    padding-bottom: 90px;
+  }
+  
+  .contacts-subtitle{
+    margin-top: 27px;
+  }
+  
+  .contacts-btn{
+    padding: 12px 70px 12px 70px;
+    margin-top: 40px;
+  }
+  
+  .contacts-social{
+    gap: 52px;
+    margin-top: 48px;
+  }
+  
+  .contacts-text{
+    margin-top: 49px;
+    font-size: 18px;
+  }
+
+  .container{
+    padding: 0 28px;
+  }
+}
+
+@media (max-width: 430px) {
+
+  /* skills */
+
+  .skills-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+  
+  }
+
+  .skills-two,
+  .skills-three,
+  .skills-four{
+    margin-top: 82px;
+  }
+
+  .skills-one{
+    margin-top: 70px;
+  }
+}
