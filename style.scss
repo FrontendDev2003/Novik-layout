@@ -1,0 +1,428 @@
+@font-face {
+  font-family: "Gilroy Medium";
+  src: url("Gilroy-Medium.woff2");
+}
+
+body{
+  font-family: Gilroy, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color:  #070707;
+    li{
+      list-style: none;
+    }
+    .container{
+      max-width: 914px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+}
+
+/* header */
+@mixin dpsp{
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin tac{
+  text-align: center;
+}
+
+@mixin anim {
+  transform: scale(1.2);
+}
+
+@mixin transition{
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+
+@mixin zindex{
+    z-index: -1;
+    position: relative;
+  }
+
+.header{
+  margin-top: 32px;
+  padding-bottom: 42px;
+}
+
+.nav{
+  &-list{
+  @include dpsp;
+  font-size: 18px;
+  font-weight: 700;
+  }
+  &-link{
+    color: #828282;
+    display: inline-block;
+    @include transition;
+  }
+  &-link:hover{
+    color:  #070707;
+    @include anim;
+    
+  }
+  &-btn{
+    width: 33px;
+    height: 19px;
+    display: none;
+  }
+}
+
+/*Denis Novik */
+
+.novik{
+  padding-bottom: 105px;
+  &-line{
+    height: 1px;
+    background-color:#828282;
+    max-width: 940px;
+  }
+  &-info{
+    @include dpsp;
+    margin-top: 40px;
+    align-items: flex-end;
+  }
+  &-title{
+    font-size: 48px;
+    font-weight: 700;
+  }
+  &-text{
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+  &-languages{
+    font-size: 16px;
+    writing-mode: vertical-lr;
+  }
+  &-img{
+    margin-top: 50px;
+  }
+  &-img-mobile{
+    display: none;
+  }
+}
+
+/* about me */
+
+.about{
+  &-me{
+    padding-top: 120px;
+    padding-bottom: 107px;
+    background: #F6F6F6;
+    @include tac;
+    font-size: 18px;
+  }
+  &-me-title{
+    font-size: 34px;
+    font-weight: 700;
+  }
+  &-me p{
+    margin: 36px auto 0 auto;
+    max-width: 350px;
+  }
+  &-me h2 + p:first-child{
+    margin: 17px auto 0 auto;
+    max-width: 440px;
+  }
+}
+
+/* skills */
+
+.skills{
+  padding-bottom: 110px;
+  margin-top: 91px;
+  &-title{
+    @include tac;
+    font-size: 34px;
+    font-weight: 700;
+  }
+  &-text{
+    @include tac;
+    font-size: 18px;
+    margin-top: 70px;
+  }
+  
+  &-wrapper{
+    margin-top: 83px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 91px;
+  }
+  
+  &-wrapper div{
+    @include tac;
+  }
+  
+  &-wrapper div h3{
+    color: #828282;
+    @include tac;
+    margin-top: 24px;
+  }
+  
+  &-stars{
+    margin-top: 41px;
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+  }
+  
+  &-wrapper div:last-child .skills-stars{
+    margin-top: 57px;
+  }
+}
+
+/* portfolio */
+
+.portfolio{
+  padding-top: 113px;
+  background: #F6F6F6;
+  &-title{
+    @include tac;
+    font-size: 34px;
+    margin-bottom: 47px;
+    font-weight: 700;
+  }
+}
+
+.project{
+  padding-bottom: 99px;
+  img{
+    margin-bottom: 45px;
+  }
+  &-link{
+    @include tac;
+    font-size: 18px;
+    text-decoration-line: underline;
+    @include transition;
+  }
+  &-link:hover{
+    @include anim;
+  }
+  &-link a{
+    color: #070707;
+  }
+}
+
+/* contacts */
+
+.contacts{
+  margin-top: 114px;
+  padding-bottom: 123px;
+  @include tac;
+  &-title{
+    font-size: 34px;
+    font-weight: 700;
+  }
+  &-subtitle{
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  &-btn{
+    color: #FFF;
+    padding: 13px 30px 6px 28px;
+    font-size: 18px;
+    background-color: #070707;
+    display: inline-block;
+    border-radius: 30px;
+    margin-top: 30px;
+    @include transition;
+  }
+  &-btn:hover{
+    box-shadow: 2px 1px 1px #070707;
+    @include anim;
+  }
+  &-social{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 92px;
+    @include transition;
+  }
+  &-social a:hover{
+    @include anim;
+  }
+  &-text{
+    color: #828282;
+    @include tac;
+    margin-top: 46px;
+  }
+}
+
+/* MEDIA */
+
+@media (max-width: 850px) {
+
+  /* skills */
+
+  .skills-wrapper{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  /* header */
+
+  .nav{
+    &-list {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      background: #fff;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: start;
+      transform: translateY(-100%);
+      transition: 0.3s ease;
+      font-size: 34px;
+      padding-left: 26px;
+      padding-bottom: 320px;
+    }
+    &-link{
+      margin-top: 68px;
+      display: inline-block;
+    
+    }
+    &-btn {
+      display: block;
+      z-index: 1;
+      position: absolute;
+      right: 25px;
+      top: 75px;
+      @include transition;
+    }
+    &-btn:hover{
+      @include anim;
+      cursor: pointer;
+    }
+    &-open .nav-list {
+      transform: translateY(0);
+    }
+  }
+  .header{
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+  /* novik */
+
+  .novik{
+    padding-bottom: 83px;
+    &-line{
+      display: none;
+    }
+    &-info{
+      margin-top: 0;
+      display: block;
+    }
+    &-text{
+      font-size: 18px;
+      margin-top: 23px;
+      @include zindex;
+    }
+    &-title{
+      margin-top: 65px;
+      @include zindex;
+    }
+    &-languages{
+      display: none;
+      margin-left: auto;
+      position: relative;
+      top: 430px;
+      color: #828282;
+      font-size: 34px;
+      transition: 0.3s ease;
+    }
+    &-languages span{
+      @include transition;
+    }
+    &-languages span:hover{
+      display: inline-block;
+      color: #070707;
+      @include anim;
+      cursor: pointer;
+    }
+    &-img{
+      display: none;
+    }
+    &-img-mobile{
+      display: block;
+      margin: 37px auto 0 auto;
+    }
+  }
+  /* about me */
+  
+  .about-me{
+    padding-top: 81px;
+    padding-bottom: 76px;
+  }
+
+  /* skills */
+
+  .skills{
+    margin-top: 83px;
+    &-text{
+      margin-top: 50px;
+    }
+  }
+  
+  /* portfolio */
+
+  .portfolio{
+    padding-top: 81px;
+  }
+
+  .project{
+    padding-bottom: 78px;
+    img{
+      margin-bottom: 33px;
+    }
+  }
+
+  /* contacts */
+
+  .contacts{
+    margin-top: 82px;
+    padding-bottom: 90px;
+    &-subtitle{
+      margin-top: 27px;
+    }
+    &-btn{
+      padding: 12px 70px 12px 70px;
+      margin-top: 40px;
+    }
+    &-social{
+      gap: 52px;
+      margin-top: 48px;
+    }
+    &-text{
+      margin-top: 49px;
+      font-size: 18px;
+    }
+  }
+  .container{
+    padding: 0 28px;
+  }
+}
+
+@media (max-width: 430px) {
+
+  /* skills */
+
+  .skills-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+    div{
+      margin-top: 82px;
+      &:first-child{
+        margin-top: 70px;
+      }
+    }
+  }
+}

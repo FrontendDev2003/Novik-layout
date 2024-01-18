@@ -1,0 +1,309 @@
+@font-face {
+  font-family: "Gilroy Medium";
+  src: url("Gilroy-Medium.woff2"); }
+body {
+  font-family: Gilroy, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #070707; }
+  body li {
+    list-style: none; }
+  body .container {
+    max-width: 914px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px; }
+
+/* header */
+.header {
+  margin-top: 32px;
+  padding-bottom: 42px; }
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700; }
+.nav-link {
+  color: #828282;
+  display: inline-block;
+  transition: 0.5s;
+  transition-timing-function: ease; }
+.nav-link:hover {
+  color: #070707;
+  transform: scale(1.2); }
+.nav-btn {
+  width: 33px;
+  height: 19px;
+  display: none; }
+
+/*Denis Novik */
+.novik {
+  padding-bottom: 105px; }
+  .novik-line {
+    height: 1px;
+    background-color: #828282;
+    max-width: 940px; }
+  .novik-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    align-items: flex-end; }
+  .novik-title {
+    font-size: 48px;
+    font-weight: 700; }
+  .novik-text {
+    font-size: 18px;
+    padding-bottom: 5px; }
+  .novik-languages {
+    font-size: 16px;
+    writing-mode: vertical-lr; }
+  .novik-img {
+    margin-top: 50px; }
+  .novik-img-mobile {
+    display: none; }
+
+/* about me */
+.about-me {
+  padding-top: 120px;
+  padding-bottom: 107px;
+  background: #F6F6F6;
+  text-align: center;
+  font-size: 18px; }
+.about-me-title {
+  font-size: 34px;
+  font-weight: 700; }
+.about-me p {
+  margin: 36px auto 0 auto;
+  max-width: 350px; }
+.about-me h2 + p:first-child {
+  margin: 17px auto 0 auto;
+  max-width: 440px; }
+
+/* skills */
+.skills {
+  padding-bottom: 110px;
+  margin-top: 91px; }
+  .skills-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700; }
+  .skills-text {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 70px; }
+  .skills-wrapper {
+    margin-top: 83px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 91px; }
+  .skills-wrapper div {
+    text-align: center; }
+  .skills-wrapper div h3 {
+    color: #828282;
+    text-align: center;
+    margin-top: 24px; }
+  .skills-stars {
+    margin-top: 41px;
+    display: flex;
+    gap: 9px;
+    justify-content: center; }
+  .skills-wrapper div:last-child .skills-stars {
+    margin-top: 57px; }
+
+/* portfolio */
+.portfolio {
+  padding-top: 113px;
+  background: #F6F6F6; }
+  .portfolio-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 47px;
+    font-weight: 700; }
+
+.project {
+  padding-bottom: 99px; }
+  .project img {
+    margin-bottom: 45px; }
+  .project-link {
+    text-align: center;
+    font-size: 18px;
+    text-decoration-line: underline;
+    transition: 0.5s;
+    transition-timing-function: ease; }
+  .project-link:hover {
+    transform: scale(1.2); }
+  .project-link a {
+    color: #070707; }
+
+/* contacts */
+.contacts {
+  margin-top: 114px;
+  padding-bottom: 123px;
+  text-align: center; }
+  .contacts-title {
+    font-size: 34px;
+    font-weight: 700; }
+  .contacts-subtitle {
+    font-size: 18px;
+    margin-top: 20px; }
+  .contacts-btn {
+    color: #FFF;
+    padding: 13px 30px 6px 28px;
+    font-size: 18px;
+    background-color: #070707;
+    display: inline-block;
+    border-radius: 30px;
+    margin-top: 30px;
+    transition: 0.5s;
+    transition-timing-function: ease; }
+  .contacts-btn:hover {
+    box-shadow: 2px 1px 1px #070707;
+    transform: scale(1.2); }
+  .contacts-social {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 92px;
+    transition: 0.5s;
+    transition-timing-function: ease; }
+  .contacts-social a:hover {
+    transform: scale(1.2); }
+  .contacts-text {
+    color: #828282;
+    text-align: center;
+    margin-top: 46px; }
+
+/* MEDIA */
+@media (max-width: 850px) {
+  /* skills */
+  .skills-wrapper {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px; } }
+@media (max-width: 500px) {
+  /* header */
+  .nav-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #fff;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: start;
+    transform: translateY(-100%);
+    transition: 0.3s ease;
+    font-size: 34px;
+    padding-left: 26px;
+    padding-bottom: 320px; }
+  .nav-link {
+    margin-top: 68px;
+    display: inline-block; }
+  .nav-btn {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    right: 25px;
+    top: 75px;
+    transition: 0.5s;
+    transition-timing-function: ease; }
+  .nav-btn:hover {
+    transform: scale(1.2);
+    cursor: pointer; }
+  .nav-open .nav-list {
+    transform: translateY(0); }
+
+  .header {
+    margin-top: 0;
+    padding-bottom: 0; }
+
+  /* novik */
+  .novik {
+    padding-bottom: 83px; }
+    .novik-line {
+      display: none; }
+    .novik-info {
+      margin-top: 0;
+      display: block; }
+    .novik-text {
+      font-size: 18px;
+      margin-top: 23px;
+      z-index: -1;
+      position: relative; }
+    .novik-title {
+      margin-top: 65px;
+      z-index: -1;
+      position: relative; }
+    .novik-languages {
+      display: none;
+      margin-left: auto;
+      position: relative;
+      top: 430px;
+      color: #828282;
+      font-size: 34px;
+      transition: 0.3s ease; }
+    .novik-languages span {
+      transition: 0.5s;
+      transition-timing-function: ease; }
+    .novik-languages span:hover {
+      display: inline-block;
+      color: #070707;
+      transform: scale(1.2);
+      cursor: pointer; }
+    .novik-img {
+      display: none; }
+    .novik-img-mobile {
+      display: block;
+      margin: 37px auto 0 auto; }
+
+  /* about me */
+  .about-me {
+    padding-top: 81px;
+    padding-bottom: 76px; }
+
+  /* skills */
+  .skills {
+    margin-top: 83px; }
+    .skills-text {
+      margin-top: 50px; }
+
+  /* portfolio */
+  .portfolio {
+    padding-top: 81px; }
+
+  .project {
+    padding-bottom: 78px; }
+    .project img {
+      margin-bottom: 33px; }
+
+  /* contacts */
+  .contacts {
+    margin-top: 82px;
+    padding-bottom: 90px; }
+    .contacts-subtitle {
+      margin-top: 27px; }
+    .contacts-btn {
+      padding: 12px 70px 12px 70px;
+      margin-top: 40px; }
+    .contacts-social {
+      gap: 52px;
+      margin-top: 48px; }
+    .contacts-text {
+      margin-top: 49px;
+      font-size: 18px; }
+
+  .container {
+    padding: 0 28px; } }
+@media (max-width: 430px) {
+  /* skills */
+  .skills-wrapper {
+    grid-template-columns: repeat(1, 1fr); }
+    .skills-wrapper div {
+      margin-top: 82px; }
+      .skills-wrapper div:first-child {
+        margin-top: 70px; } }
+
+/*# sourceMappingURL=style.css.map */
